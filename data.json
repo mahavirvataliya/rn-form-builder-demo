@@ -1,0 +1,184 @@
+{
+    "fields": [
+    {
+    "key": "field_5cad76d33d381",
+    "name": "message",
+    "label": "Message",
+    "required": true,
+    "type": "message",
+    "logic": false,
+    "message": "Fill Revert Forms"
+    },
+    {
+    "key": "field_5cad785d3d382",
+    "name": "name",
+    "label": "Full Name",
+    "required": true,
+    "type": "text",
+    "logic": false
+    },
+    {
+    "key": "field_5cad78773d383",
+    "name": "email",
+    "label": "Email",
+    "required": true,
+    "type": "email",
+    "logic": false
+    },
+    {
+    "key": "field_5cad78813d384",
+    "name": "address",
+    "label": "Address",
+    "required": true,
+    "type": "text",
+    "props": {
+    "multiline": true
+    },
+    "logic": false
+    },
+    {
+    "key": "field_5cad788a3d385",
+    "name": "age",
+    "label": "Age",
+    "required": true,
+    "type": "number",
+    "logic": false
+    },
+    {
+    "key": "field_5cad78ce3d387",
+    "name": "hobby",
+    "label": "Hobby",
+    "required": true,
+    "type": "select",
+    "multiple": true,
+    "options": [
+    {
+    "id": "Cricket",
+    "name": "Cricket"
+    },
+    {
+    "id": "Football",
+    "name": "Football"
+    },
+    {
+    "id": "Reading",
+    "name": "Reading"
+    },
+    {
+    "id": "Writing",
+    "name": "Writing"
+    },
+    {
+    "id": "Coding",
+    "name": "Coding"
+    }
+    ],
+    "objectType": true,
+    "primaryKey": "id",
+    "labelKey": "name",
+    "logic": false
+    },
+    {
+    "key": "field_5cad79153d388",
+    "name": "gender",
+    "label": "Gender",
+    "required": true,
+    "type": "select",
+    "options": [
+    {
+    "id": "Male",
+    "name": "Male"
+    },
+    {
+    "id": "Female",
+    "name": "Female"
+    }
+    ],
+    "objectType": true,
+    "primaryKey": "id",
+    "labelKey": "name",
+    "multiple": false,
+    "logic": false
+    },
+    {
+    "key": "field_5cad79293d389",
+    "name": "date_of_join",
+    "label": "Date Of Join",
+    "required": true,
+    "type": "date",
+    "mode": "date",
+    "logic": false
+    },
+    {
+    "key": "field_5cad79383d38a",
+    "name": "location",
+    "label": "Location",
+    "required": true,
+    "type": "text",
+    "props": {
+    "multiline": true
+    },
+    "logic": {
+    "status": 1,
+    "rules": [
+    {
+    "field": "field_5cad857c5e16f",
+    "operator": "==",
+    "value": "Vadodara"
+    }
+    ],
+    "allorany": "all",
+    "key": "field_5cad79383d38a"
+    }
+    },
+    {
+    "key": "field_5cad857c5e16f",
+    "name": "city",
+    "label": "City",
+    "required": true,
+    "type": "select",
+    "options": [
+    {
+    "id": "Vadodara",
+    "name": "Vadodara"
+    },
+    {
+    "id": "Surat",
+    "name": "Surat"
+    },
+    {
+    "id": "Mumbai",
+    "name": "Mumbai"
+    },
+    {
+    "id": "Delhi",
+    "name": "Delhi"
+    },
+    {
+    "id": "Anand",
+    "name": "Anand"
+    }
+    ],
+    "objectType": true,
+    "primaryKey": "id",
+    "labelKey": "name",
+    "multiple": false,
+    "logic": false
+    }
+    ],
+    "logic": [
+    {
+    "status": 1,
+    "rules": [
+    {
+    "field": "field_5cad857c5e16f",
+    "operator": "==",
+    "value": "Vadodara"
+    }
+    ],
+    "allorany": "all",
+    "key": "field_5cad79383d38a"
+    }
+    ]
+    }
+    
