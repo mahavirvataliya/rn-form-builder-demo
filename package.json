@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@infobizzs/rn-form-builder": "^2.0.1",
+    "@infobizzs/rn-form-builder": "^2.0.2",
     "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.4"
