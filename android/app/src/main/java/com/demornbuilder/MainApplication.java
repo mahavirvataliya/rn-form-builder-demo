@@ -3,6 +3,10 @@ package com.demornbuilder;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +26,11 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new DocumentPickerPackage(),
+            new RNFetchBlobPackage(),
+            new RNFileViewerPackage(),
+            new PickerPackage()
       );
     }
 

@@ -7,10 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
-    "@infobizzs/rn-form-builder": "^2.0.2",
+    "@infobizzs/rn-form-builder": "^2.0.3",
     "native-base": "^2.12.1",
     "react": "16.8.3",
-    "react-native": "0.59.4"
+    "react-native": "0.59.4",
+    "react-native-file-viewer": "^1.0.14",
+    "react-native-image-crop-picker": "^0.23.1",
+    "react-native-permissions": "^1.1.1",
+    "react-native-document-picker": "git+https://github.com/Elyx0/react-native-document-picker.git#v3",
+    "rn-fetch-blob": "^0.10.15"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

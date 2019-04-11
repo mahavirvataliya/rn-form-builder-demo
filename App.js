@@ -7,6 +7,8 @@ import theme from "./form-theme";
 import LogicResolver from "./lib/logic-resolver";
 import customFields from './lib/custom-fields';
 import * as data from './data.json';
+import { Root } from "native-base";
+import { Container, Header, Left, Body, Right, Title } from 'native-base';
 
 const styles = {
   container: {
@@ -39,26 +41,26 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    // fetch("http://192.168.0.116:8000/example")
-    // .then(resp => resp.json())
-    // .then(response => {
-    //   this.setState({
-    //     form: response.fields,
-    //     logics: response.logic,
-    //     orginalForm: response.fields
-    //   });
-    //    this.onValueChange();
-    // });
-
-    const response = data;
-    this.setState({
-      form: response.fields,
-      logics: response.logic,
-      orginalForm: response.fields
+    fetch("http://192.168.0.110:8000/example")
+    .then(resp => resp.json())
+    .then(response => {
+      this.setState({
+        form: response.fields,
+        logics: response.logic,
+        orginalForm: response.fields
+      });
+       this.onValueChange();
     });
-    setTimeout(() => {
-      this.onValueChange();
-    }, 100);
+
+    // const response = data;
+    // this.setState({
+    //   form: response.fields,
+    //   logics: response.logic,
+    //   orginalForm: response.fields
+    // });
+    // setTimeout(() => {
+    //   this.onValueChange();
+    // }, 100);
   }
 
   onValueChange() {
@@ -101,7 +103,8 @@ export default class App extends Component {
         </View>
       );
     return (
-      <StyleProvider style={getTheme()}>
+      <Root>
+      {/* <StyleProvider style={getTheme()}> */}
         <View style={styles.wrapper}>
           <ScrollView>
             <GenerateForm
@@ -124,7 +127,8 @@ export default class App extends Component {
             </View>
           </ScrollView>
         </View>
-      </StyleProvider>
+      {/* </StyleProvider> */}
+      </Root>
     );
   }
 }
