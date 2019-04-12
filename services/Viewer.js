@@ -13,7 +13,7 @@ const openToken = {};
 
 function getFileName(url, file) {
   let filename;
-  const fileUrl = file.attachments || file.file || file.value;
+  const fileUrl = file.attachments || file.file || file.value || file.fileURL;
   if (fileUrl) {
     filename = fileUrl.substring(fileUrl.lastIndexOf('/') + 1, fileUrl.length);
   }
@@ -37,9 +37,9 @@ const openFile = async (downloadedFilePath, file) => {
     showOpenWithDialog: true,
   };
   console.log('2. File', file, downloadedFilePath);
-  // if (file.title) {
-  //   options.displayName = file.title;
-  // }
+  if (file.name) {
+    options.displayName = file.name;
+  }
 
   if (isFileExists && file) {
     try {
@@ -64,7 +64,7 @@ const downloadFile = async (file) => {
     if (file == null || file === undefined) {
       return false;
     }
-    const url = file.file_url;
+    const url = file.fileURL;
     if (url == null || url === undefined) {
       return false;
     }
@@ -73,8 +73,6 @@ const downloadFile = async (file) => {
     const dateString = getCurrentDateTimeString();
     const downloadingFilename = dateString + downloadedFileName;
     const downloadingPath = getLocalPath(url, file, downloadingFilename);
-    // await RNFetchBlob.fs.unlink(downloadingPath);
-    // await RNFetchBlob.fs.unlink(downloadedFilePath);
 
     console.log(url);
     const res = await RNFetchBlob
@@ -125,7 +123,7 @@ const viewFile = async (file) => {
   }
 
   try {
-    const url = file.file_url;
+    const url = file.fileURL;
     if (url == null || url === undefined) {
       return;
     }
@@ -167,7 +165,7 @@ const viewLocalFile = async (file) => {
     showAppsSuggestions: true,
     showOpenWithDialog: true,
   };
-  console.log('2. File', file, path);
+  console.log('LOCAL. File', file, path);
   if (file.name) {
     options.displayName = file.name;
   }
@@ -197,9 +195,9 @@ const viewLocalFile = async (file) => {
 };
 
 const getCurrentDateTimeString = () => {
-  const today = new Date();
+  let today = new Date();
   const dd = today.getDate();
-  const mm = today.getMonth()+1; 
+  let mm = today.getMonth()+1; 
   const yyyy = today.getFullYear();
   const time = today.getTime();
   if(dd < 10) {

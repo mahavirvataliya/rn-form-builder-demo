@@ -32,6 +32,8 @@ target 'demoRNBuilder' do
 
   pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
 
+  pod 'RNShare', :path => '../node_modules/react-native-share'
+
   target 'demoRNBuilderTests' do
     inherit! :search_paths
     # Pods for testing
