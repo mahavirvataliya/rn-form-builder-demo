@@ -655,10 +655,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@infobizzs/rn-form-builder@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@infobizzs/rn-form-builder/-/rn-form-builder-2.0.4.tgz#c90d55b702e9f172890bd7cafbb017172e20a2c6"
-  integrity sha512-j7BcqmOSBpFY2zIxs3tWFfO8+6xU6k31R22ioAco8l06teYR56x31NZf3xAYP3WtPL5UTEZ1eGwGccm5UiTKGw==
+"@infobizzs/rn-form-builder@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@infobizzs/rn-form-builder/-/rn-form-builder-2.0.7.tgz#82226d174bdb7294acf35c66ecaae3de67c95a3c"
+  integrity sha512-urQlzOSg5hF8C4o3eoTsfC1bQVrSTbBYZr9KsIOw76xaP2JK2GBClGDk2YuuTP2ESgwX/YweDRb66NvHrBF1fA==
   dependencies:
     fs-extra "^3.0.1"
     lodash "^4.17.4"

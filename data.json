@@ -15,7 +15,9 @@
     "label": "Full Name",
     "required": true,
     "type": "text",
-    "logic": false
+    "logic": false,
+    "defaultValue": "Hello",
+    "value": "Mahavir"
     },
     {
     "key": "field_5cad78773d383",
@@ -23,7 +25,8 @@
     "label": "Email",
     "required": true,
     "type": "email",
-    "logic": false
+    "logic": false,
+    "value": "mahavir@infobizzs.com"
     },
     {
     "key": "field_5cad78813d384",
@@ -34,7 +37,8 @@
     "props": {
     "multiline": true
     },
-    "logic": false
+    "logic": false,
+    "value": "Infobizzs"
     },
     {
     "key": "field_5cad788a3d385",
@@ -42,7 +46,8 @@
     "label": "Age",
     "required": true,
     "type": "number",
-    "logic": false
+    "logic": false,
+    "value": "22"
     },
     {
     "key": "field_5cad78ce3d387",
@@ -76,7 +81,21 @@
     "objectType": true,
     "primaryKey": "id",
     "labelKey": "name",
-    "logic": false
+    "logic": false,
+    "value": [
+    {
+    "id": "Cricket",
+    "name": "Cricket"
+    },
+    {
+    "id": "Writing",
+    "name": "Writing"
+    },
+    {
+    "id": "Coding",
+    "name": "Coding"
+    }
+    ]
     },
     {
     "key": "field_5cad79153d388",
@@ -98,7 +117,11 @@
     "primaryKey": "id",
     "labelKey": "name",
     "multiple": false,
-    "logic": false
+    "logic": false,
+    "value": {
+    "id": "Male",
+    "name": "Male"
+    }
     },
     {
     "key": "field_5cad79293d389",
@@ -107,7 +130,8 @@
     "required": true,
     "type": "date",
     "mode": "date",
-    "logic": false
+    "logic": false,
+    "value": "04/07/2019"
     },
     {
     "key": "field_5cad79383d38a",
@@ -129,7 +153,8 @@
     ],
     "allorany": "all",
     "key": "field_5cad79383d38a"
-    }
+    },
+    "value": "Infobizzs Ocen 301"
     },
     {
     "key": "field_5cad857c5e16f",
@@ -163,7 +188,63 @@
     "primaryKey": "id",
     "labelKey": "name",
     "multiple": false,
-    "logic": false
+    "logic": false,
+    "value": {
+    "id": "Vadodara",
+    "name": "Vadodara"
+    }
+    },
+    {
+    "key": "field_5caeda4354548",
+    "name": "profile_picture",
+    "label": "Profile Picture",
+    "required": true,
+    "type": "image",
+    "logic": false,
+    "value": {
+    "name": "2540_images.png",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_images.png",
+    "thumb_url": "http://192.168.0.128:8000/uploads/files/2540_images.png"
+    }
+    },
+    {
+    "key": "field_5caf29a5cf923",
+    "name": "introduction",
+    "label": "Introduction",
+    "required": true,
+    "type": "video",
+    "logic": false,
+    "value": {
+    "name": "2540_flutter.mp4",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_flutter.mp4",
+    "thumb_url": "http://192.168.0.128:8000/extensions/mp4.png"
+    }
+    },
+    {
+    "key": "field_5caf29c3740db",
+    "name": "resume",
+    "label": "Resume",
+    "required": true,
+    "type": "file",
+    "logic": false,
+    "value": {
+    "name": "2540_embarace-javascript-190415031607.pdf",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_embarace-javascript-190415031607.pdf",
+    "thumb_url": "http://192.168.0.128:8000/extensions/pdf.png"
+    }
+    },
+    {
+    "key": "field_5cb069693eb16",
+    "name": "id_proof",
+    "label": "ID Proof",
+    "required": true,
+    "type": "image",
+    "logic": false,
+    "value": {
+    "name": "2540_ClointLogo1024.png",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_ClointLogo1024.png",
+    "thumb_url": "http://192.168.0.128:8000/uploads/files/2540_ClointLogo1024.png"
+    }
     }
     ],
     "logic": [
@@ -173,12 +254,62 @@
     {
     "field": "field_5cad857c5e16f",
     "operator": "==",
-    "value": "Vadodara"
+    "value": "Surat"
     }
     ],
     "allorany": "all",
     "key": "field_5cad79383d38a"
     }
-    ]
+    ],
+    "values": {
+    "name": "Mahavir",
+    "email": "mahavir@infobizzs.com",
+    "address": "Infobizzs",
+    "age": "22",
+    "hobby": [
+    {
+    "id": "Cricket",
+    "name": "Cricket"
+    },
+    {
+    "id": "Writing",
+    "name": "Writing"
+    },
+    {
+    "id": "Coding",
+    "name": "Coding"
+    }
+    ],
+    "gender": {
+    "id": "Male",
+    "name": "Male"
+    },
+    "date_of_join": "04/07/2019",
+    "location": "Infobizzs Ocen 301",
+    "city": {
+    "id": "Vadodara",
+    "name": "Vadodara"
+    },
+    "profile_picture": {
+    "name": "2540_images.png",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_images.png",
+    "thumb_url": "http://192.168.0.128:8000/uploads/files/2540_images.png"
+    },
+    "introduction": {
+    "name": "2540_flutter.mp4",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_flutter.mp4",
+    "thumb_url": "http://192.168.0.128:8000/extensions/mp4.png"
+    },
+    "resume": {
+    "name": "2540_embarace-javascript-190415031607.pdf",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_embarace-javascript-190415031607.pdf",
+    "thumb_url": "http://192.168.0.128:8000/extensions/pdf.png"
+    },
+    "id_proof": {
+    "name": "2540_ClointLogo1024.png",
+    "file_url": "http://192.168.0.128:8000/uploads/files/2540_ClointLogo1024.png",
+    "thumb_url": "http://192.168.0.128:8000/uploads/files/2540_ClointLogo1024.png"
+    }
+    }
     }
     

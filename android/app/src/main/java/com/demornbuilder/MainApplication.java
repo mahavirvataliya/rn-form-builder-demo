@@ -3,6 +3,7 @@ package com.demornbuilder;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
 import cl.json.RNSharePackage;
 import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
@@ -34,6 +35,7 @@ public class MainApplication extends Application implements ShareApplication, Re
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new VectorIconsPackage(),
             new RNSharePackage(),
             new DocumentPickerPackage(),
             new RNFetchBlobPackage(),
